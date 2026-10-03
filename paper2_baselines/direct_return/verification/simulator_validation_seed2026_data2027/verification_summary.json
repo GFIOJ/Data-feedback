@@ -1,0 +1,135 @@
+{
+  "passed": true,
+  "input_folder": "D:\\信息回传\\code\\paper2_baselines\\direct_return\\input\\input_ref_5to10mbit_v10",
+  "result_folder": "D:\\信息回传\\code\\paper2_baselines\\direct_return\\verification\\simulator_validation_seed2026_data2027\\rate_greedy",
+  "input_hashes_sha256": {
+    "scenario.json": "a3b24f24606ca287525acd4b625de621b3e332ffe0d0f9423b6171735b655143",
+    "collection_events.csv": "86b506ea38559111bff5868dec59c0a33c128f93275c67aa62016c82083b1465",
+    "trajectories.npz": "475c19850dac90218438cbe131c4953cf5ea758647a0aada557574f562b55a92",
+    "node_states.npz": "7071832169c49b1bcc9a21d9aa26800425ae3805bea0ca38826f310a2b907dde",
+    "environment.npz": "0355ec61403430645a4fd7a16af2e4cd3b1ae89bb0f04cb8e42a04802f80eb1e",
+    "slot_arrivals.npz": "0292653c5a25f8481577e5094971fa235172e23f8d85a41ef7ddab4a88ae7282"
+  },
+  "input_validation": {
+    "passed": true,
+    "checks": {
+      "trajectory_endpoints_match_online_times": true,
+      "global_timestamps_not_shifted": true,
+      "planner_path_validation_passed": true,
+      "one_event_per_target": true,
+      "events_inside_scan_windows": true,
+      "events_during_uav_online_period": true,
+      "sendable_only_from_next_slot": true,
+      "bits_equal_eight_times_bytes": true,
+      "event_slot_and_cumulative_amounts_match": true,
+      "offline_uav_positions_are_nan": true,
+      "full_slot_eligibility_is_correct": true,
+      "exported_geometry_counts_match": true,
+      "exported_geometry_paths_are_obstacle_free": true,
+      "exported_trajectories_are_mutually_conflict_free": true,
+      "events_match_actual_scan_position_and_criterion": true
+    },
+    "event_count": 8000,
+    "total_data_bytes": 7504298438,
+    "total_data_bits": 60034387504
+  },
+  "expected_comparison": {
+    "data_unit_count": {
+      "actual": 8000,
+      "reference": 8000,
+      "difference": null,
+      "passed": true
+    },
+    "total_generated_bits": {
+      "actual": 60034387504.0,
+      "reference": 60034387504.0,
+      "difference": 0.0,
+      "passed": true
+    },
+    "complete_data_unit_rate": {
+      "actual": 1.0,
+      "reference": 1.0,
+      "difference": 0.0,
+      "passed": true
+    },
+    "all_data_mean_delay_s": {
+      "actual": 63.58476096944617,
+      "reference": 63.58476096944617,
+      "difference": 0.0,
+      "passed": true
+    },
+    "buffer_constraint_violated": {
+      "actual": false,
+      "reference": false,
+      "difference": null,
+      "passed": true
+    },
+    "conservation_passed": {
+      "actual": true,
+      "reference": true,
+      "difference": null,
+      "passed": true
+    }
+  },
+  "reference_source": "D:\\信息回传\\code\\paper2_baselines\\direct_return\\verification\\baseline_frozen.json",
+  "frozen_comparison": {
+    "data_unit_count": {
+      "actual": 8000,
+      "reference": 8000,
+      "difference": null,
+      "passed": true
+    },
+    "total_generated_bits": {
+      "actual": 60034387504.0,
+      "reference": 60034387504.0,
+      "difference": 0.0,
+      "passed": true
+    },
+    "complete_data_unit_rate": {
+      "actual": 1.0,
+      "reference": 1.0,
+      "difference": 0.0,
+      "passed": true
+    },
+    "all_data_mean_delay_s": {
+      "actual": 63.58476096944617,
+      "reference": 63.58476096944617,
+      "difference": 0.0,
+      "passed": true
+    },
+    "buffer_constraint_violated": {
+      "actual": false,
+      "reference": false,
+      "difference": null,
+      "passed": true
+    },
+    "conservation_passed": {
+      "actual": true,
+      "reference": true,
+      "difference": null,
+      "passed": true
+    }
+  },
+  "channel_config": {
+    "carrier_frequency_hz": 2400000000.0,
+    "reference_distance_m": 1.0,
+    "reference_path_loss_db": 40.0,
+    "path_loss_exponent": 2.2,
+    "obstruction_loss_db": 20.0,
+    "shadowing_std_db": 4.0,
+    "k_los": 4.0,
+    "k_los_unit": "linear",
+    "transmit_power_w": 0.1,
+    "total_bandwidth_hz": 20000000.0,
+    "num_subchannels": 4,
+    "noise_psd_w_per_hz": 4e-21,
+    "random_seed": 2026,
+    "valid_distance_min_m": 1.0,
+    "valid_distance_max_m": 5000.0
+  },
+  "simulation_config": {
+    "buffer_capacity_bits": 8000000000,
+    "absolute_tolerance_bits": 1e-06,
+    "relative_tolerance": 1e-10
+  }
+}

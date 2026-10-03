@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "checks": {
+    "decimal_1mb_equals_8mbit": true,
+    "four_times_5mhz_equals_20mhz": true,
+    "subchannel_noise_power_is_2e_minus_14_w": true,
+    "all_loaded_units_are_8mbit": true,
+    "expected_target_and_uav_counts": true,
+    "scene_obstacles_targets_and_base_station_unchanged": true,
+    "timestamps_regenerated": true,
+    "timestamps_not_old_values_multiplied_by_two": true,
+    "trajectory_speed_not_above_5_mps": true,
+    "path_collision_and_collection_input_validation_passed": true,
+    "coverage_is_100_percent": true,
+    "one_event_per_target": true,
+    "sendable_from_next_slot_only": true,
+    "buffer_limit_is_1gb_per_uav": true
+  },
+  "actual_uav_count": 20,
+  "actual_target_count": 8000,
+  "data_unit_bytes": 1000000,
+  "data_unit_bits": 8000000,
+  "total_demand_bits": 64000000000,
+  "maximum_moving_segment_speed_mps": 5.000000000000568,
+  "last_collection_time_s": 1795.4438057566356,
+  "last_return_time_s": 1842.4697792446063,
+  "slot_count": 1843,
+  "assignment_task_count": 400,
+  "assignment_sha256": "bc63f4658693317154c419719d1a9696e3aac29b458ecb4a3ca0c9bd4c398a63",
+  "assignment_note": "The current planner has no fixed-assignment input. It reruns its deterministic assignment with the unchanged scene/task set and seed; the new assignment is recorded, but the legacy export contains no assignment table for a direct equality check.",
+  "runtime_checks": {
+    "queue_and_link_capacity_checks_completed_without_error": true,
+    "data_conservation_passed": true,
+    "delivery_flags_match_received_amounts": true,
+    "loaded_total_matches_simulated_total": true
+  }
+}

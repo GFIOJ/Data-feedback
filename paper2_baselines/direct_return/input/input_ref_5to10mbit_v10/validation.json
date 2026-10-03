@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "checks": {
+    "trajectory_endpoints_match_online_times": true,
+    "global_timestamps_not_shifted": true,
+    "planner_path_validation_passed": true,
+    "one_event_per_target": true,
+    "events_inside_scan_windows": true,
+    "events_during_uav_online_period": true,
+    "sendable_only_from_next_slot": true,
+    "bits_equal_eight_times_bytes": true,
+    "event_slot_and_cumulative_amounts_match": true,
+    "offline_uav_positions_are_nan": true,
+    "full_slot_eligibility_is_correct": true,
+    "exported_geometry_counts_match": true,
+    "exported_geometry_paths_are_obstacle_free": true,
+    "exported_trajectories_are_mutually_conflict_free": true,
+    "events_match_actual_scan_position_and_criterion": true
+  },
+  "event_count": 8000,
+  "total_data_bytes": 7504298438,
+  "total_data_bits": 60034387504
+}

@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "checks": {
+    "decimal_1mb_equals_8mbit": true,
+    "four_times_5mhz_equals_20mhz": true,
+    "subchannel_noise_power_is_2e_minus_14_w": true,
+    "all_loaded_units_are_8mbit": true,
+    "expected_target_and_uav_counts": true,
+    "scenario_config_declares_10_mps": true,
+    "trajectory_segments_confirm_10_mps": true,
+    "trajectory_node_state_and_environment_files_unchanged": true,
+    "scene_obstacles_targets_and_base_station_unchanged": true,
+    "takeoff_return_and_slot_times_unchanged": true,
+    "collection_identity_time_and_position_unchanged": true,
+    "path_collision_and_collection_input_validation_passed": true,
+    "coverage_is_100_percent": true,
+    "one_event_per_target": true,
+    "sendable_from_next_slot_only": true,
+    "buffer_limit_is_1gb_per_uav": true
+  },
+  "actual_uav_count": 20,
+  "actual_target_count": 8000,
+  "data_unit_bytes": 1000000,
+  "data_unit_bits": 8000000,
+  "total_demand_bits": 64000000000,
+  "maximum_moving_segment_speed_mps": 10.000000000001137,
+  "last_collection_time_s": 899.2512577729705,
+  "last_return_time_s": 925.3682229706367,
+  "slot_count": 926,
+  "source_input_folder": "D:\\信息回传\\code\\paper2_input",
+  "reuse_note": "trajectories.npz, node_states.npz, environment.npz and every collection-event identity/time/position field are unchanged from the validated original 10 m/s input; only data amounts and their derived arrival statistics were recomputed.",
+  "runtime_checks": {
+    "queue_and_link_capacity_checks_completed_without_error": true,
+    "data_conservation_passed": true,
+    "delivery_flags_match_received_amounts": true,
+    "loaded_total_matches_simulated_total": true
+  }
+}

@@ -1,0 +1,6 @@
+.runtime/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+paper1/outputs/
+paper1/figures/

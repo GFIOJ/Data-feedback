@@ -1,0 +1,128 @@
+{
+  "input_folder": "D:\\信息回传\\code\\paper2_baselines\\direct_return\\input\\input_ref_5to10mbit_v10",
+  "input_sha256": {
+    "collection_events.csv": "86b506ea38559111bff5868dec59c0a33c128f93275c67aa62016c82083b1465",
+    "data_unit_sizes.csv": "b12cb745ac64158d820fe95e8eeafaa1c57bb5e44445413693e8469444310719",
+    "environment.npz": "0355ec61403430645a4fd7a16af2e4cd3b1ae89bb0f04cb8e42a04802f80eb1e",
+    "node_states.npz": "7071832169c49b1bcc9a21d9aa26800425ae3805bea0ca38826f310a2b907dde",
+    "scenario.json": "a3b24f24606ca287525acd4b625de621b3e332ffe0d0f9423b6171735b655143",
+    "slot_arrivals.npz": "0292653c5a25f8481577e5094971fa235172e23f8d85a41ef7ddab4a88ae7282",
+    "system_arrivals.csv": "6a0787c4c5a52d071bc48ded83f362e2bb14cb0c24a42ce07e66bebd84b059b8",
+    "trajectories.npz": "475c19850dac90218438cbe131c4953cf5ea758647a0aada557574f562b55a92",
+    "uav_metadata.csv": "6a6ea7ca061caf9d6ebd77c6436089e6b266ce3e8de26b849f801356899c974a",
+    "validation.json": "6455898da216a97936f7821aba7ee2eb881b7968cc8909496485c95fa6d8e003"
+  },
+  "command": ".\\.runtime\\python\\python.exe -m paper2_baselines.direct_return.run_comparison",
+  "channel_config": {
+    "carrier_frequency_hz": 2400000000.0,
+    "reference_distance_m": 1.0,
+    "reference_path_loss_db": 40.0,
+    "path_loss_exponent": 2.2,
+    "obstruction_loss_db": 20.0,
+    "shadowing_std_db": 4.0,
+    "k_los": 4.0,
+    "k_los_unit": "linear",
+    "transmit_power_w": 0.1,
+    "total_bandwidth_hz": 20000000.0,
+    "num_subchannels": 4,
+    "noise_psd_w_per_hz": 4e-21,
+    "random_seed": 2026,
+    "valid_distance_min_m": 1.0,
+    "valid_distance_max_m": 5000.0
+  },
+  "simulation_config": {
+    "buffer_capacity_bits": 8000000000,
+    "absolute_tolerance_bits": 1e-06,
+    "relative_tolerance": 1e-10
+  },
+  "strategy_rules": {
+    "rate_greedy": "At each slot, among full-slot eligible UAVs with nonempty start-of-slot queues, compute the interference-free single-subchannel direct rate, select up to four highest rates, and assign distinct subchannels.",
+    "round_robin": "Scan stable UAV IDs from a cyclic pointer, skip ineligible/empty UAVs, select up to four once each, then advance past the last selected UAV.",
+    "oldest_first": "Rank each eligible/nonempty UAV by the age of its FIFO-head unit at slot start; select up to four oldest, breaking equal ages by UAV ID."
+  },
+  "same_channel_snapshots": true,
+  "common_completed_count": 5271,
+  "common_set_limitation": "Common-set delays describe only units completed by all strategies and do not replace all-unit completion-rate comparisons.",
+  "rows": [
+    {
+      "strategy": "rate_greedy",
+      "complete_units": 8000,
+      "delay_sample_count": 8000,
+      "complete_unit_rate": 1.0,
+      "delivered_bit_ratio": 1.0,
+      "completed_mean_delay_s": 63.58476096944617,
+      "completed_p95_delay_s": 188.25128359538488,
+      "completed_max_delay_s": 298.6710856727759,
+      "pre_first_send_mean_s": 61.021260969446175,
+      "pre_first_send_p95_s": 184.16266261089024,
+      "post_first_send_to_complete_mean_s": 2.5635,
+      "post_first_send_to_complete_p95_s": 9.0,
+      "final_undelivered_bits": 0.0,
+      "total_backlog_peak_bits": 9685299121.127,
+      "max_single_uav_peak_buffer_bits": 1097728826.0788226,
+      "buffer_constraint_violated": false,
+      "conservation_passed": true
+    },
+    {
+      "strategy": "round_robin",
+      "complete_units": 6066,
+      "delay_sample_count": 6066,
+      "complete_unit_rate": 0.75825,
+      "delivered_bit_ratio": 0.7589135412907879,
+      "completed_mean_delay_s": 210.43236299743194,
+      "completed_p95_delay_s": 399.32062515381904,
+      "completed_max_delay_s": 435.8984330618858,
+      "pre_first_send_mean_s": 206.9834675144118,
+      "pre_first_send_p95_s": 396.27027914341045,
+      "post_first_send_to_complete_mean_s": 3.448895483020112,
+      "post_first_send_to_complete_p95_s": 11.0,
+      "final_undelivered_bits": 14473477884.115936,
+      "total_backlog_peak_bits": 27687175534.38719,
+      "max_single_uav_peak_buffer_bits": 1743689552.4063346,
+      "buffer_constraint_violated": false,
+      "conservation_passed": true
+    },
+    {
+      "strategy": "oldest_first",
+      "complete_units": 5288,
+      "delay_sample_count": 5288,
+      "complete_unit_rate": 0.661,
+      "delivered_bit_ratio": 0.6610219973264293,
+      "completed_mean_delay_s": 212.57662949030535,
+      "completed_p95_delay_s": 368.3793186031344,
+      "completed_max_delay_s": 373.2308382971803,
+      "pre_first_send_mean_s": 208.93914840104665,
+      "pre_first_send_p95_s": 366.4065038679893,
+      "post_first_send_to_complete_mean_s": 3.637481089258699,
+      "post_first_send_to_complete_p95_s": 8.0,
+      "final_undelivered_bits": 20350336767.83709,
+      "total_backlog_peak_bits": 29696459352.50561,
+      "max_single_uav_peak_buffer_bits": 1669129017.8354912,
+      "buffer_constraint_violated": false,
+      "conservation_passed": true
+    }
+  ],
+  "common_rows": [
+    {
+      "strategy": "rate_greedy",
+      "common_complete_count": 5271,
+      "mean_delay_s": 48.984298678858295,
+      "p95_delay_s": 141.70766706011716,
+      "max_delay_s": 297.8977992251489
+    },
+    {
+      "strategy": "round_robin",
+      "common_complete_count": 5271,
+      "mean_delay_s": 206.42330456009526,
+      "p95_delay_s": 403.11431366479803,
+      "max_delay_s": 435.8984330618858
+    },
+    {
+      "strategy": "oldest_first",
+      "common_complete_count": 5271,
+      "mean_delay_s": 212.28538006758907,
+      "p95_delay_s": 368.3803402338456,
+      "max_delay_s": 373.2308382971803
+    }
+  ]
+}

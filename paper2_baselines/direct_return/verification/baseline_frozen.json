@@ -1,0 +1,315 @@
+{
+  "status": "frozen_after_validation",
+  "scope": "5-10 Mbit per target, 10 m/s, three direct-return schedulers",
+  "input_directory": "paper2_baselines/direct_return/input/input_ref_5to10mbit_v10",
+  "input_sha256": {
+    "collection_events.csv": "86b506ea38559111bff5868dec59c0a33c128f93275c67aa62016c82083b1465",
+    "data_unit_sizes.csv": "b12cb745ac64158d820fe95e8eeafaa1c57bb5e44445413693e8469444310719",
+    "environment.npz": "0355ec61403430645a4fd7a16af2e4cd3b1ae89bb0f04cb8e42a04802f80eb1e",
+    "node_states.npz": "7071832169c49b1bcc9a21d9aa26800425ae3805bea0ca38826f310a2b907dde",
+    "scenario.json": "a3b24f24606ca287525acd4b625de621b3e332ffe0d0f9423b6171735b655143",
+    "slot_arrivals.npz": "0292653c5a25f8481577e5094971fa235172e23f8d85a41ef7ddab4a88ae7282",
+    "system_arrivals.csv": "6a0787c4c5a52d071bc48ded83f362e2bb14cb0c24a42ce07e66bebd84b059b8",
+    "trajectories.npz": "475c19850dac90218438cbe131c4953cf5ea758647a0aada557574f562b55a92",
+    "uav_metadata.csv": "6a6ea7ca061caf9d6ebd77c6436089e6b266ce3e8de26b849f801356899c974a",
+    "validation.json": "6455898da216a97936f7821aba7ee2eb881b7968cc8909496485c95fa6d8e003"
+  },
+  "scenario_config": {
+    "scene_width_m": 2000,
+    "scene_length_m": 2000,
+    "boundary_margin_m": 50.0,
+    "blocks_x": 10,
+    "blocks_y": 10,
+    "ground_slots": 60000,
+    "average_stack_tiers": 5,
+    "aggregate_strips_per_region": 4,
+    "num_effective_tags": 8000,
+    "num_uavs": 20,
+    "uav_speed_mps": 10.0,
+    "depot_altitude_m": 15.0,
+    "safety_radius_m": 5.0,
+    "grid_resolution_m": 20.0,
+    "max_scan_segment_m": 250.0,
+    "max_task_load_ratio": 1.0,
+    "seed": 1,
+    "slot_seconds": 1.0,
+    "base_station_position_m": [
+      1000.0,
+      1000.0,
+      30.0
+    ],
+    "output_dir": "paper1/outputs/paper2_input_10mps",
+    "quick": true,
+    "visualize": true,
+    "depot_position_m": [
+      1000.0,
+      1000.0,
+      15.0
+    ],
+    "ground_utilization": 0.44586144,
+    "coordinate_unit": "m",
+    "time_unit": "s",
+    "data_rate_unit": "bit/s",
+    "global_time_origin_s": 0.0,
+    "simulation_end_time_s": 925.3682229706367,
+    "slot_count": 926,
+    "physical_container_count": 300000,
+    "aggregate_obstacle_count": 400,
+    "inspection_target_count": 8000,
+    "coverage_denominator": "specified inspection targets",
+    "inspection_target_coverage_rate": 1.0,
+    "rfid_max_read_range_m": 8.0,
+    "rfid_max_scan_angle_deg": 120.0,
+    "base_station_always_online": true,
+    "communication_online_interval": "[takeoff_time_s, return_time_s)",
+    "scheduling_eligibility": "only UAVs online for the entire slot",
+    "slot_rule": "zero-based slot k is [k*dt,(k+1)*dt); an event at k*dt belongs to k; enqueue at slot end; send from k+1",
+    "identifier_rule": "CSV and NPZ identifiers are zero-based; paper slot number = zero-based slot + 1",
+    "collection_rule": "first successful radius-and-angle read creates one complete data unit",
+    "delivery_rule": "delivery is not modeled; return does not clear or deliver queued data",
+    "trajectory_interpolation": "piecewise linear between timestamped waypoints; waits remain stationary",
+    "makespan_seconds": 925.3682229706367,
+    "soc_seconds": 17152.8354292772,
+    "load_imbalance_percent": 15.430964014220978,
+    "path_validation_passed": true,
+    "num_scan_tasks": 400,
+    "num_hover_points": 0,
+    "container_dimensions_m": {
+      "length": 12.192,
+      "width": 2.438,
+      "height": 2.896
+    },
+    "data_size_mode": "per_data_unit",
+    "data_unit_count": 8000,
+    "data_size_min_bytes": 625024,
+    "data_size_max_bytes": 1249955,
+    "data_size_mean_bytes": 938037.30475,
+    "data_size_std_bytes": 179111.85256373705,
+    "total_data_bytes": 7504298438,
+    "total_data_bits": 60034387504,
+    "data_size_distribution": "discrete_uniform_integer_bytes_inclusive",
+    "data_size_min_bytes_requested": 625000,
+    "data_size_max_bytes_requested": 1250000,
+    "data_size_seed": 2027,
+    "expected_total_bits_for_8000_units": 60000000000
+  },
+  "channel_config": {
+    "carrier_frequency_hz": 2400000000.0,
+    "reference_distance_m": 1.0,
+    "reference_path_loss_db": 40.0,
+    "path_loss_exponent": 2.2,
+    "obstruction_loss_db": 20.0,
+    "shadowing_std_db": 4.0,
+    "k_los": 4.0,
+    "k_los_unit": "linear",
+    "transmit_power_w": 0.1,
+    "total_bandwidth_hz": 20000000.0,
+    "num_subchannels": 4,
+    "noise_psd_w_per_hz": 4e-21,
+    "random_seed": 2026,
+    "valid_distance_min_m": 1.0,
+    "valid_distance_max_m": 5000.0
+  },
+  "simulation_config": {
+    "buffer_capacity_bits": 8000000000,
+    "absolute_tolerance_bits": 1e-06,
+    "relative_tolerance": 1e-10
+  },
+  "data_config": {
+    "unit_count": 8000,
+    "total_bits": 60034387504,
+    "size_min_bytes": 625024,
+    "size_max_bytes": 1249955,
+    "data_size_seed": 2027
+  },
+  "runtime": {
+    "python": "3.12.10",
+    "implementation": "CPython",
+    "required_packages_installed": {
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "matplotlib": "3.11.2"
+    },
+    "declared_requirements": [
+      "numpy>=1.24",
+      "scipy>=1.10",
+      "matplotlib>=3.7"
+    ]
+  },
+  "commands": {
+    "rate_greedy_regression": ".\\.runtime\\python\\python.exe -m paper2_baselines.direct_return.verification.simulator_validation",
+    "three_scheduler_comparison": ".\\.runtime\\python\\python.exe -m paper2_baselines.direct_return.run_comparison",
+    "all_tests": ".\\.runtime\\python\\python.exe -m unittest discover -v",
+    "independent_audit": ".\\.runtime\\python\\python.exe paper2_baselines\\direct_return\\verification\\simulator_audit.py"
+  },
+  "validation_evidence": {
+    "unit_tests": {
+      "passed": 40,
+      "total": 40,
+      "command": ".\\.runtime\\python\\python.exe -m unittest discover -v"
+    },
+    "independent_audit": {
+      "passed": 12,
+      "total": 12,
+      "checks": [
+        {
+          "name": "relay_chain",
+          "passed": true,
+          "detail": "Three hops: completion=4 s, delay=3.75 s; one original bit delivered."
+        },
+        {
+          "name": "reject_halfduplex",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "interference",
+          "passed": true,
+          "detail": "Exact SINRs: 2/(1+1)=1; 3/(1+0.5)=2."
+        },
+        {
+          "name": "relay_exit",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "overflow",
+          "passed": true,
+          "detail": "Overflow is retained and flagged INVALID, not silently dropped or prevented."
+        },
+        {
+          "name": "merged_fragments",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "zero_service",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "last_arrival",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "real_input",
+          "passed": true,
+          "detail": {
+            "events": 8000,
+            "bits": 60034387504,
+            "slots": 926
+          }
+        },
+        {
+          "name": "fractional_id_rejected",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "bad_timestamp_rejected",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "name": "bad_size_rejected",
+          "passed": true,
+          "detail": null
+        }
+      ]
+    },
+    "formal_input_and_rate_greedy_regression_passed": true,
+    "formal_input_checks": {
+      "passed": true,
+      "checks": {
+        "trajectory_endpoints_match_online_times": true,
+        "global_timestamps_not_shifted": true,
+        "planner_path_validation_passed": true,
+        "one_event_per_target": true,
+        "events_inside_scan_windows": true,
+        "events_during_uav_online_period": true,
+        "sendable_only_from_next_slot": true,
+        "bits_equal_eight_times_bytes": true,
+        "event_slot_and_cumulative_amounts_match": true,
+        "offline_uav_positions_are_nan": true,
+        "full_slot_eligibility_is_correct": true,
+        "exported_geometry_counts_match": true,
+        "exported_geometry_paths_are_obstacle_free": true,
+        "exported_trajectories_are_mutually_conflict_free": true,
+        "events_match_actual_scan_position_and_criterion": true
+      },
+      "event_count": 8000,
+      "total_data_bytes": 7504298438,
+      "total_data_bits": 60034387504
+    }
+  },
+  "strategy_results": {
+    "rate_greedy": {
+      "strategy": "rate_greedy",
+      "complete_units": 8000,
+      "delay_sample_count": 8000,
+      "complete_unit_rate": 1.0,
+      "delivered_bit_ratio": 1.0,
+      "completed_mean_delay_s": 63.58476096944617,
+      "completed_p95_delay_s": 188.25128359538488,
+      "completed_max_delay_s": 298.6710856727759,
+      "pre_first_send_mean_s": 61.021260969446175,
+      "pre_first_send_p95_s": 184.16266261089024,
+      "post_first_send_to_complete_mean_s": 2.5635,
+      "post_first_send_to_complete_p95_s": 9.0,
+      "final_undelivered_bits": 0.0,
+      "total_backlog_peak_bits": 9685299121.127,
+      "max_single_uav_peak_buffer_bits": 1097728826.0788226,
+      "buffer_constraint_violated": false,
+      "conservation_passed": true
+    },
+    "round_robin": {
+      "strategy": "round_robin",
+      "complete_units": 6066,
+      "delay_sample_count": 6066,
+      "complete_unit_rate": 0.75825,
+      "delivered_bit_ratio": 0.7589135412907879,
+      "completed_mean_delay_s": 210.43236299743194,
+      "completed_p95_delay_s": 399.32062515381904,
+      "completed_max_delay_s": 435.8984330618858,
+      "pre_first_send_mean_s": 206.9834675144118,
+      "pre_first_send_p95_s": 396.27027914341045,
+      "post_first_send_to_complete_mean_s": 3.448895483020112,
+      "post_first_send_to_complete_p95_s": 11.0,
+      "final_undelivered_bits": 14473477884.115936,
+      "total_backlog_peak_bits": 27687175534.38719,
+      "max_single_uav_peak_buffer_bits": 1743689552.4063346,
+      "buffer_constraint_violated": false,
+      "conservation_passed": true
+    },
+    "oldest_first": {
+      "strategy": "oldest_first",
+      "complete_units": 5288,
+      "delay_sample_count": 5288,
+      "complete_unit_rate": 0.661,
+      "delivered_bit_ratio": 0.6610219973264293,
+      "completed_mean_delay_s": 212.57662949030535,
+      "completed_p95_delay_s": 368.3793186031344,
+      "completed_max_delay_s": 373.2308382971803,
+      "pre_first_send_mean_s": 208.93914840104665,
+      "pre_first_send_p95_s": 366.4065038679893,
+      "post_first_send_to_complete_mean_s": 3.637481089258699,
+      "post_first_send_to_complete_p95_s": 8.0,
+      "final_undelivered_bits": 20350336767.83709,
+      "total_backlog_peak_bits": 29696459352.50561,
+      "max_single_uav_peak_buffer_bits": 1669129017.8354912,
+      "buffer_constraint_violated": false,
+      "conservation_passed": true
+    }
+  },
+  "regression_reference": {
+    "data_unit_count": 8000,
+    "total_generated_bits": 60034387504.0,
+    "complete_data_unit_rate": 1.0,
+    "all_data_mean_delay_s": 63.58476096944617,
+    "buffer_constraint_violated": false,
+    "conservation_passed": true
+  },
+  "source_hash_manifest": "paper2_baselines/direct_return/verification/source_sha256.json",
+  "source_hash_scope": "all Python files under paper1, paper2_model and paper2_baselines/direct_return, including verification scripts; generated outputs and hash manifests excluded"
+}

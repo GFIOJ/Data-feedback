@@ -1,0 +1,352 @@
+{
+  "baseline_name": "direct-return rate-greedy baseline",
+  "channel_config": {
+    "carrier_frequency_hz": 2400000000.0,
+    "reference_distance_m": 1.0,
+    "reference_path_loss_db": 40.0,
+    "path_loss_exponent": 2.2,
+    "obstruction_loss_db": 20.0,
+    "shadowing_std_db": 4.0,
+    "k_los": 4.0,
+    "k_los_unit": "linear",
+    "transmit_power_w": 0.1,
+    "total_bandwidth_hz": 20000000.0,
+    "num_subchannels": 4,
+    "noise_psd_w_per_hz": 4e-21,
+    "random_seed": 2026,
+    "valid_distance_min_m": 1.0,
+    "valid_distance_max_m": 5000.0
+  },
+  "random_seed": 2026,
+  "simulation_config": {
+    "buffer_capacity_bits": 8000000000,
+    "absolute_tolerance_bits": 1e-06,
+    "relative_tolerance": 1e-10
+  },
+  "slot_count": 926,
+  "slot_seconds": 1.0,
+  "simulation_horizon_s": 926.0,
+  "trajectory_simulation_end_time_s": 925.3682229706367,
+  "complete_data_unit_rate": 0.9985,
+  "data_unit_count": 8000,
+  "complete_data_unit_count": 7988,
+  "delivered_bit_ratio": 0.9985375479426473,
+  "total_generated_bits": 64000000000.0,
+  "total_generated_bytes": 8000000000.0,
+  "delivered_bits": 63906403068.32942,
+  "delivered_bytes": 7988300383.541178,
+  "undelivered_data_bits": 93596931.670578,
+  "undelivered_data_bytes": 11699616.45882225,
+  "all_data_complete": false,
+  "all_data_mean_delay_s": null,
+  "completed_data_conditional_mean_delay_s": 74.3211903247332,
+  "completed_data_p95_delay_s": 211.62194004797877,
+  "completed_data_max_delay_s": 307.06097445336115,
+  "incomplete_data_unit_count": 12,
+  "partially_received_incomplete_data_unit_count": 1,
+  "residual_data_bits": 93596931.67057578,
+  "peak_buffer_bits_per_uav": [
+    795729360.7344227,
+    721453973.3312297,
+    767416409.7880256,
+    826947345.8400652,
+    908395156.8582742,
+    877744642.0431377,
+    892138756.646624,
+    994197886.5612848,
+    1258819058.0788226,
+    1260446376.9018276,
+    1166153014.860223,
+    681632067.1436665,
+    1266504589.7284656,
+    575622164.7135171,
+    513828527.2977083,
+    539075761.5295469,
+    633509575.5189008,
+    463330294.29771274,
+    622281933.9661803,
+    547303111.0579493
+  ],
+  "total_backlog_peak_bits": 11730097772.343302,
+  "max_single_uav_peak_buffer_bits": 1266504589.7284656,
+  "buffer_capacity_bits": 8000000000.0,
+  "max_buffer_utilization": 0.15831307371605818,
+  "buffer_constraint_violated": false,
+  "buffer_violations": [],
+  "performance_metrics_valid": true,
+  "conservation_passed": true,
+  "final_conservation_error_bits": 2.2202730178833008e-06,
+  "experiment_data_per_collection_bytes": 1000000,
+  "capacity_diagnostic": {
+    "channel_config": {
+      "carrier_frequency_hz": 2400000000.0,
+      "reference_distance_m": 1.0,
+      "reference_path_loss_db": 40.0,
+      "path_loss_exponent": 2.2,
+      "obstruction_loss_db": 20.0,
+      "shadowing_std_db": 4.0,
+      "k_los": 4.0,
+      "k_los_unit": "linear",
+      "transmit_power_w": 0.1,
+      "total_bandwidth_hz": 20000000.0,
+      "num_subchannels": 4,
+      "noise_psd_w_per_hz": 4e-21,
+      "random_seed": 2026,
+      "valid_distance_min_m": 1.0,
+      "valid_distance_max_m": 5000.0
+    },
+    "random_seed": 2026,
+    "slot_count": 926,
+    "slot_seconds": 1.0,
+    "data_unit_count": 8000,
+    "total_data_bits": 64000000000,
+    "bs_capacity_upper_bound_bits": 115644436289.53247,
+    "load_to_upper_bound_ratio": 0.5534204848365277,
+    "infeasible_by_upper_bound": false,
+    "conclusion": "not_ruled_out_by_upper_bound",
+    "assumptions": [
+      "Only full-slot scheduling-eligible UAVs are considered.",
+      "Each UAV uses at most one subchannel and each base-station subchannel receives at most one link.",
+      "The best min(F, online UAV count) interference-free UAV-to-base rates are selected in every slot.",
+      "Selected UAVs are assumed to always have data; arrival times, buffer locations and relay overhead are ignored.",
+      "This is a receive-capacity upper bound, not achieved throughput or a delivery schedule."
+    ]
+  },
+  "experiment_name": "literature-reference 1 MB / original 10 m/s direct-return baseline",
+  "input_folder": "D:\\信息回传\\code\\paper2_experiments\\input_ref_1mb_v10",
+  "output_folder": "D:\\信息回传\\code\\paper2_results\\direct_ref_1mb_v10_b5mhz_f4_seed2026",
+  "input_validation": {
+    "passed": true,
+    "checks": {
+      "decimal_1mb_equals_8mbit": true,
+      "four_times_5mhz_equals_20mhz": true,
+      "subchannel_noise_power_is_2e_minus_14_w": true,
+      "all_loaded_units_are_8mbit": true,
+      "expected_target_and_uav_counts": true,
+      "scenario_config_declares_10_mps": true,
+      "trajectory_segments_confirm_10_mps": true,
+      "trajectory_node_state_and_environment_files_unchanged": true,
+      "scene_obstacles_targets_and_base_station_unchanged": true,
+      "takeoff_return_and_slot_times_unchanged": true,
+      "collection_identity_time_and_position_unchanged": true,
+      "path_collision_and_collection_input_validation_passed": true,
+      "coverage_is_100_percent": true,
+      "one_event_per_target": true,
+      "sendable_from_next_slot_only": true,
+      "buffer_limit_is_1gb_per_uav": true
+    },
+    "actual_uav_count": 20,
+    "actual_target_count": 8000,
+    "data_unit_bytes": 1000000,
+    "data_unit_bits": 8000000,
+    "total_demand_bits": 64000000000,
+    "maximum_moving_segment_speed_mps": 10.000000000001137,
+    "last_collection_time_s": 899.2512577729705,
+    "last_return_time_s": 925.3682229706367,
+    "slot_count": 926,
+    "source_input_folder": "D:\\信息回传\\code\\paper2_input",
+    "reuse_note": "trajectories.npz, node_states.npz, environment.npz and every collection-event identity/time/position field are unchanged from the validated original 10 m/s input; only data amounts and their derived arrival statistics were recomputed.",
+    "runtime_checks": {
+      "queue_and_link_capacity_checks_completed_without_error": true,
+      "data_conservation_passed": true,
+      "delivery_flags_match_received_amounts": true,
+      "loaded_total_matches_simulated_total": true
+    }
+  },
+  "parameter_sources": {
+    "literature_2025": "Table 1: 1 MB transmission packet and 5 MHz high-frequency data-link bandwidth. Its 5 m/s experiment speed is not used here.",
+    "literature_2022": "Section 4: 5 MHz per link, 20-30 dBm transmit-power range, and 1-10 Mbit packet length.",
+    "scenario_adaptation": "The validated original project patrol speed of 10 m/s is retained. The 1 MB literature value is mapped to the complete data unit generated by one target.",
+    "project_settings": "Four subchannels, 20 MHz aggregate bandwidth, 1 GB per-UAV buffer, and retained fading/path-loss parameters are project settings. The four subchannels are not inferred from a literature node-degree limit of four."
+  },
+  "input_generation_config": {
+    "scene_width_m": 2000,
+    "scene_length_m": 2000,
+    "boundary_margin_m": 50.0,
+    "blocks_x": 10,
+    "blocks_y": 10,
+    "ground_slots": 60000,
+    "average_stack_tiers": 5,
+    "aggregate_strips_per_region": 4,
+    "num_effective_tags": 8000,
+    "num_uavs": 20,
+    "uav_speed_mps": 10.0,
+    "depot_altitude_m": 15.0,
+    "safety_radius_m": 5.0,
+    "grid_resolution_m": 20.0,
+    "max_scan_segment_m": 250.0,
+    "max_task_load_ratio": 1.0,
+    "seed": 1,
+    "slot_seconds": 1.0,
+    "data_per_collection_mb": 1.0,
+    "base_station_position_m": [
+      1000.0,
+      1000.0,
+      30.0
+    ],
+    "output_dir": "D:\\信息回传\\code\\paper2_experiments\\input_ref_1mb_v10",
+    "quick": true,
+    "visualize": false
+  },
+  "last_collection_time_s": 899.2512577729705,
+  "last_return_time_s": 925.3682229706367,
+  "last_delivery_time_s": 905.0,
+  "actual_uav_count": 20,
+  "actual_target_count": 8000,
+  "residual_location_count": 12,
+  "exit_stranded": [
+    {
+      "uav_id": 0,
+      "communication_exit_time_s": 796.8045095115616,
+      "exit_slot_paper_one_based": 797,
+      "stranded_bits": 0.0,
+      "stranded_data_unit_ids": []
+    },
+    {
+      "uav_id": 1,
+      "communication_exit_time_s": 799.3711761882283,
+      "exit_slot_paper_one_based": 800,
+      "stranded_bits": 0.0,
+      "stranded_data_unit_ids": []
+    },
+    {
+      "uav_id": 2,
+      "communication_exit_time_s": 802.6853897606015,
+      "exit_slot_paper_one_based": 803,
+      "stranded_bits": 0.0,
+      "stranded_data_unit_ids": []
+    },
+    {
+      "uav_id": 3,
+      "communication_exit_time_s": 793.0258298451212,
+      "exit_slot_paper_one_based": 794,
+      "stranded_bits": 0.0,
+      "stranded_data_unit_ids": []
+    },
+    {
+      "uav_id": 4,
+      "communication_exit_time_s": 839.2871667784055,
+      "exit_slot_paper_one_based": 840,
+      "stranded_bits": 0.0,
+      "stranded_data_unit_ids": []
+    },
+    {
+      "uav_id": 5,
+      "communication_exit_time_s": 835.564681196754,
+      "exit_slot_paper_one_based": 836,
+      "stranded_bits": 0.0,
+      "stranded_data_unit_ids": []
+    },
+    {
+      "uav_id": 6,
+      "communication_exit_time_s": 841.8942735695922,
+      "exit_slot_paper_one_based": 842,
+      "stranded_bits": 0.0,
+      "stranded_data_unit_ids": []
+    },
+    {
+      "uav_id": 7,
+      "communication_exit_time_s": 844.4609402462589,
+      "exit_slot_paper_one_based": 845,
+      "stranded_bits": 0.0,
+      "stranded_data_unit_ids": []
+    },
+    {
+      "uav_id": 8,
+      "communication_exit_time_s": 866.6270586222408,
+      "exit_slot_paper_one_based": 867,
+      "stranded_bits": 0.0,
+      "stranded_data_unit_ids": []
+    },
+    {
+      "uav_id": 9,
+      "communication_exit_time_s": 847.7751538186321,
+      "exit_slot_paper_one_based": 848,
+      "stranded_bits": 0.0,
+      "stranded_data_unit_ids": []
+    },
+    {
+      "uav_id": 10,
+      "communication_exit_time_s": 877.9030326726934,
+      "exit_slot_paper_one_based": 878,
+      "stranded_bits": 0.0,
+      "stranded_data_unit_ids": []
+    },
+    {
+      "uav_id": 11,
+      "communication_exit_time_s": 872.7696993193599,
+      "exit_slot_paper_one_based": 873,
+      "stranded_bits": 0.0,
+      "stranded_data_unit_ids": []
+    },
+    {
+      "uav_id": 12,
+      "communication_exit_time_s": 869.1937252989076,
+      "exit_slot_paper_one_based": 870,
+      "stranded_bits": 93596931.67057578,
+      "stranded_data_unit_ids": [
+        4442,
+        4443,
+        4444,
+        4445,
+        4448,
+        4449,
+        4451,
+        4452,
+        4455,
+        4456,
+        4457,
+        4459
+      ]
+    },
+    {
+      "uav_id": 13,
+      "communication_exit_time_s": 925.3682229706367,
+      "exit_slot_paper_one_based": 926,
+      "stranded_bits": 0.0,
+      "stranded_data_unit_ids": []
+    },
+    {
+      "uav_id": 14,
+      "communication_exit_time_s": 875.3363659960266,
+      "exit_slot_paper_one_based": 876,
+      "stranded_bits": 0.0,
+      "stranded_data_unit_ids": []
+    },
+    {
+      "uav_id": 15,
+      "communication_exit_time_s": 922.80155629397,
+      "exit_slot_paper_one_based": 923,
+      "stranded_bits": 0.0,
+      "stranded_data_unit_ids": []
+    },
+    {
+      "uav_id": 16,
+      "communication_exit_time_s": 920.2348896173032,
+      "exit_slot_paper_one_based": 921,
+      "stranded_bits": 0.0,
+      "stranded_data_unit_ids": []
+    },
+    {
+      "uav_id": 17,
+      "communication_exit_time_s": 864.0199518310542,
+      "exit_slot_paper_one_based": 865,
+      "stranded_bits": 0.0,
+      "stranded_data_unit_ids": []
+    },
+    {
+      "uav_id": 18,
+      "communication_exit_time_s": 896.2585205854596,
+      "exit_slot_paper_one_based": 897,
+      "stranded_bits": 0.0,
+      "stranded_data_unit_ids": []
+    },
+    {
+      "uav_id": 19,
+      "communication_exit_time_s": 861.4532851543875,
+      "exit_slot_paper_one_based": 862,
+      "stranded_bits": 0.0,
+      "stranded_data_unit_ids": []
+    }
+  ]
+}

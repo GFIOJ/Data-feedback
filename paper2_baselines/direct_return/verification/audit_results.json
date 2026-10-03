@@ -1,0 +1,70 @@
+{
+  "passed": 12,
+  "total": 12,
+  "checks": [
+    {
+      "name": "relay_chain",
+      "passed": true,
+      "detail": "Three hops: completion=4 s, delay=3.75 s; one original bit delivered."
+    },
+    {
+      "name": "reject_halfduplex",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interference",
+      "passed": true,
+      "detail": "Exact SINRs: 2/(1+1)=1; 3/(1+0.5)=2."
+    },
+    {
+      "name": "relay_exit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "overflow",
+      "passed": true,
+      "detail": "Overflow is retained and flagged INVALID, not silently dropped or prevented."
+    },
+    {
+      "name": "merged_fragments",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "zero_service",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "last_arrival",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "real_input",
+      "passed": true,
+      "detail": {
+        "events": 8000,
+        "bits": 60034387504,
+        "slots": 926
+      }
+    },
+    {
+      "name": "fractional_id_rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "bad_timestamp_rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "bad_size_rejected",
+      "passed": true,
+      "detail": null
+    }
+  ]
+}
